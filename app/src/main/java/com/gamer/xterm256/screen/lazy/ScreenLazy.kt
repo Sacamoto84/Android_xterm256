@@ -20,59 +20,58 @@ import com.gamer.xterm256.screen.lazy.bottomNavigation.ModalBottomSheetContent
 import com.gamer.xterm256.console
 import com.gamer.xterm256.screen.lazy.ui.Warning
 
-var isConfimChange = mutableStateOf(false)
+//var isConfimChange = mutableStateOf(false)
 
-
-@OptIn(ExperimentalMaterial3Api::class)
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Composable
-fun ScreenLazy(navController: NavHostController) {
-
-    val scaffoldState = rememberBottomSheetScaffoldState(
-
-        bottomSheetState = SheetState(
-            skipPartiallyExpanded = false, // pass false here
-            initialValue = SheetValue.PartiallyExpanded,
-            skipHiddenState = true
-        )
-
+//@OptIn(ExperimentalMaterial3Api::class)
+//@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+//@Composable
+//fun ScreenLazy(navController: NavHostController) {
+//
+//    val scaffoldState = rememberBottomSheetScaffoldState(
+//
 //        bottomSheetState = SheetState(
-//            false,
-//            LocalDensity.current,
+//            skipPartiallyExpanded = false, // pass false here
 //            initialValue = SheetValue.PartiallyExpanded,
 //            skipHiddenState = true
 //        )
-    )
-
-    BottomSheetScaffold(
-        scaffoldState = scaffoldState,
-        sheetShape = androidx.compose.ui.graphics.RectangleShape,
-        sheetContainerColor = Color.DarkGray,
-        containerColor = Color.Black,
-        sheetPeekHeight = 58.dp,
-
-        sheetDragHandle = {
-            BottomNavigationLazy(navController)
-        },
-        // = true,
-        sheetContent = { ModalBottomSheetContent(navController, scaffoldState)
-}
-
-    )
-    {
-
-        Box(
-            Modifier
-                .fillMaxSize()
-                .padding(bottom = it.calculateBottomPadding())
-        ) {
-            console.lazy() //Modifier.padding(4.dp).recomposeHighlighter()
-            Warning()
-        }
-
-    }
-
-}
+//
+////        bottomSheetState = SheetState(
+////            false,
+////            LocalDensity.current,
+////            initialValue = SheetValue.PartiallyExpanded,
+////            skipHiddenState = true
+////        )
+//    )
+//
+//    BottomSheetScaffold(
+//        scaffoldState = scaffoldState,
+//        sheetShape = androidx.compose.ui.graphics.RectangleShape,
+//        sheetContainerColor = Color.DarkGray,
+//        containerColor = Color.Black,
+//        sheetPeekHeight = 58.dp,
+//
+//        sheetDragHandle = {
+//            BottomNavigationLazy(navController)
+//        },
+//        // = true,
+//        sheetContent = { ModalBottomSheetContent(navController, scaffoldState)
+//}
+//
+//    )
+//    {
+//
+//        Box(
+//            Modifier
+//                .fillMaxSize()
+//                .padding(bottom = it.calculateBottomPadding())
+//        ) {
+//            console.lazy() //Modifier.padding(4.dp).recomposeHighlighter()
+//            Warning()
+//        }
+//
+//    }
+//
+//}
 
 
 
